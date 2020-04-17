@@ -2,6 +2,7 @@ package com.sample.project;
 
 /**
  * This class has main method and returns "Hello World"
+ * and some easter eggs questions and answers.
  */
 public class App 
 {
