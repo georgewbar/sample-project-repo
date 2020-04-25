@@ -9,7 +9,6 @@ public class App
     public static void main( String[] args )
     {
         System.out.println(getHelloString() + " " + getWorldString());
-        System.out.println(getQuestionsAndAnswers());
     }
 
     public static String getHelloString(){
@@ -20,7 +19,4 @@ public class App
         return "World";
     }
 
-    public static String getQuestionsAndAnswers(){
-        return "questions and answers";
-    }
 }

@@ -28,12 +28,4 @@ public class AppTest
         assertEquals("World", App.getWorldString());
     }
 
-    /**
-     * Tests that getQuestionsAndAnswers returns "questions and answers".
-     */
-    @Test
-    public void testGetQuestionsAndAnswers()
-    {
-        assertEquals("questions and answers", App.getQuestionsAndAnswers());
-    }
 }
