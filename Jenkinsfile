@@ -2,7 +2,6 @@ pipeline {
     agent {
         docker {
             image 'maven:3-alpine'
-            args '-v /root/.m2:/root/.m2'
         }
     }
     options {
@@ -26,8 +25,12 @@ pipeline {
         }
         stage('Deliver') { 
             steps {
-                sh 'mvn install' 
-                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                sh 'mvn -DskipTests install'
+            }
+            post {
+                success {
+                    archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                }
             }
         }
     }
